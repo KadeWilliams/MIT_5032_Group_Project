@@ -1,0 +1,41 @@
+Period\Unit:
+Australian dollar
+Bulgarian lev
+Brazilian real
+Canadian dollar
+Swiss franc
+Chinese yuan renminbi
+Cypriot pound
+Czech koruna
+Danish krone
+Estonian kroon
+UK pound sterling
+Greek drachma
+Hong Kong dollar
+Croatian kuna
+Hungarian forint
+Indonesian rupiah
+Israeli shekel
+Indian rupee
+Iceland krona
+Japanese yen
+Korean won
+Lithuanian litas
+Latvian lats
+Maltese lira
+Mexican peso
+Malaysian ringgit
+Norwegian krone
+New Zealand dollar
+Philippine peso
+Polish zloty
+Romanian leu
+Russian rouble
+Swedish krona
+Singapore dollar
+Slovenian tolar
+Slovak koruna
+Thai baht
+Turkish lira
+US dollar
+South African rand
