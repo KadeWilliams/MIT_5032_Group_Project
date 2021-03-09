@@ -79,18 +79,31 @@ gbp_min = df_small['GBP'].min()
 
 df_small = df_small.astype(type_conversion_dict)
 df_small.set_index('Period', inplace=True)
-# # Bar Chart of data
 
+# # Bar Chart of data
 ax = df_small.plot()
+
+
 plt.scatter('2020-03-19', df_small['GBP'].max(), c='orange')
 plt.scatter('2020-02-17', df_small['GBP'].min(), c='orange')
 plt.scatter('2021-01-06', df_small['USD'].max(), c='purple')
 plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
 axes = plt.gca()
 
-
 ax.legend()
 
 plt.axhline(y=1, color='r', linestyle='--')
+plt.show()
+
+ax2 = df_small['GBP'].plot()
+plt.scatter('2020-03-19', df_small['GBP'].max(), c='orange')
+plt.scatter('2020-02-17', df_small['GBP'].min(), c='orange')
+plt.show()
+
+ax3 = df_small['USD'].plot()
+plt.scatter('2021-01-06', df_small['USD'].max(), c='purple')
+plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
+plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
+
 plt.show()
 
