@@ -33,11 +33,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kadew\Desktop\Desktop\PyCharmProjects\MIT 5032\Python\Group Project" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kadew\Desktop\MIT 5032\Python\Group Project" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kadew\Desktop\Desktop\PyCharmProjects\MIT 5032\Python\Group Project" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -106,8 +106,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.plot_test" />
       <item itemvalue="Python.group_project" />
+      <item itemvalue="Python.plot_test" />
     </list>
     <recent_temporary>
       <list>
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615328525072</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed Simple Chart: GBP, USD from January 2020 to February 2021">
+      <created>1615332010648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615332010648</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,11 +160,11 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1054" y="462" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1615318420852" />
-    <state x="987" y="376" key="FileChooserDialogImpl" timestamp="1614908757800">
+    <state x="987" y="376" key="FileChooserDialogImpl" timestamp="1615332507072">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614191199061" />
-    <state x="987" y="376" key="FileChooserDialogImpl/0.0.2560.1410@0.0.2560.1410" timestamp="1614908757800" />
+    <state x="987" y="376" key="FileChooserDialogImpl/0.0.2560.1410@0.0.2560.1410" timestamp="1615332507072" />
     <state x="625" y="605" key="Github.ShareDialog" timestamp="1615318104135">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -166,34 +173,34 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="451" y="405" key="Github.UntrackedFilesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1615318125829" />
-    <state width="1256" height="400" key="GridCell.Tab.0.bottom" timestamp="1615331974386">
+    <state width="1256" height="400" key="GridCell.Tab.0.bottom" timestamp="1615335030478">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614191202232" />
-    <state width="1256" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1615331974386" />
-    <state width="1256" height="400" key="GridCell.Tab.0.center" timestamp="1615331974386">
+    <state width="1256" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1615335030478" />
+    <state width="1256" height="400" key="GridCell.Tab.0.center" timestamp="1615335030478">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614191202231" />
-    <state width="1256" height="400" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1615331974386" />
-    <state width="1256" height="400" key="GridCell.Tab.0.left" timestamp="1615331974386">
+    <state width="1256" height="400" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1615335030478" />
+    <state width="1256" height="400" key="GridCell.Tab.0.left" timestamp="1615335030477">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614191202231" />
-    <state width="1256" height="400" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1615331974386" />
-    <state width="1256" height="400" key="GridCell.Tab.0.right" timestamp="1615331974386">
+    <state width="1256" height="400" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1615335030477" />
+    <state width="1256" height="400" key="GridCell.Tab.0.right" timestamp="1615335030478">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614191202231" />
-    <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1615331974386" />
+    <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1615335030478" />
     <state x="615" y="228" key="SettingsEditor" timestamp="1615318290717">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/-2560.-174.2560.1410@0.0.1920.1050" timestamp="1614190993779" />
     <state x="615" y="228" key="SettingsEditor/0.0.2560.1410@0.0.2560.1410" timestamp="1615318290717" />
-    <state x="232" y="441" key="Vcs.Push.Dialog.v2" timestamp="1615328606131">
+    <state x="232" y="441" key="Vcs.Push.Dialog.v2" timestamp="1615332014896">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="232" y="441" key="Vcs.Push.Dialog.v2/0.0.2560.1410@0.0.2560.1410" timestamp="1615328606131" />
+    <state x="232" y="441" key="Vcs.Push.Dialog.v2/0.0.2560.1410@0.0.2560.1410" timestamp="1615332014896" />
   </component>
 </project>

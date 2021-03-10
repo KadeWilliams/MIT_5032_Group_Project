@@ -71,7 +71,6 @@ df_small = df_small[ df_small['Period'] < '2021-02-12 00:00:00']
 usd_max = df_small['USD'].max()
 usd_min = df_small['USD'].min()
 
-print()
 
 gbp_max = df_small['GBP'].max()
 gbp_min = df_small['GBP'].min()
@@ -95,15 +94,4 @@ ax.legend()
 plt.axhline(y=1, color='r', linestyle='--')
 plt.show()
 
-ax2 = df_small['GBP'].plot()
-plt.scatter('2020-03-19', df_small['GBP'].max(), c='orange')
-plt.scatter('2020-02-17', df_small['GBP'].min(), c='orange')
-plt.show()
-
-ax3 = df_small['USD'].plot()
-plt.scatter('2021-01-06', df_small['USD'].max(), c='purple')
-plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
-plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
-
-plt.show()
 
