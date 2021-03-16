@@ -83,10 +83,16 @@ df_small.set_index('Period', inplace=True)
 ax = df_small.plot()
 
 
-plt.scatter('2020-03-19', df_small['GBP'].max(), c='orange')
-plt.scatter('2020-02-17', df_small['GBP'].min(), c='orange')
+plt.scatter('2020-03-19', df_small['GBP'].max(), c='black')
+plt.scatter('2020-02-18', df_small['GBP'].min(), c='black')
 plt.scatter('2021-01-06', df_small['USD'].max(), c='purple')
 plt.scatter('2020-03-20', df_small['USD'].min(), c='purple')
+plt.xlabel('Period', fontsize=20)
+plt.ylabel('Euro', fontsize=20)
+
+for label in (ax.get_xticklabels()+ax.get_yticklabels()):
+        label.set_fontsize(16)
+
 axes = plt.gca()
 
 ax.legend()
