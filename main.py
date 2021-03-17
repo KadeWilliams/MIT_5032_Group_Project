@@ -21,7 +21,7 @@ df.columns = df.columns.str.strip()
 df = df.fillna(0)
 
 # Reduce the width of the data frame
-df_small = df[[
+df = df[[
     'Period Unit',
     # 'Australian dollar',
     # 'Chinese yuan renminbi',
@@ -41,16 +41,16 @@ headers = {
     'US dollar': 'USD'
 }
 
-df_small.rename(columns=headers, inplace=True)
-# print(df_small)
+df.rename(columns=headers, inplace=True)
+# print(df)
 
 
-# df_small = df_small[~df_small['AUD'].isin(['-'])]
-# df_small = df_small[~df_small['CNY'].isin(['-'])]
-# df_small = df_small[~df_small['KRW'].isin(['-'])]
-# df_small = df_small[~df_small['BRL'].isin(['-'])]
-df_small = df_small[~df_small['GBP'].isin(['-'])]
-df_small = df_small[~df_small['USD'].isin(['-'])]
+# df = df[~df['AUD'].isin(['-'])]
+# df = df[~df['CNY'].isin(['-'])]
+# df = df[~df['KRW'].isin(['-'])]
+# df = df[~df['BRL'].isin(['-'])]
+df = df[~df['GBP'].isin(['-'])]
+df = df[~df['USD'].isin(['-'])]
 
 # Change the data type of the working columns
 type_conversion_dict = {
@@ -62,26 +62,26 @@ type_conversion_dict = {
     'USD': float
 }
 
-df_small['Period'] = pd.to_datetime(df_small['Period'])
+df['Period'] = pd.to_datetime(df['Period'])
 
-df_small = df_small[df_small['Period'] > '2020-01-01 00:00:00']
-df_small = df_small[df_small['Period'] < '2021-02-12 00:00:00']
+df = df[df['Period'] > '2020-01-01 00:00:00']
+df = df[df['Period'] < '2021-02-12 00:00:00']
 
-usd_max = df_small['USD'].max()
-usd_min = df_small['USD'].min()
+usd_max = df['USD'].max()
+usd_min = df['USD'].min()
 
-gbp_max = df_small['GBP'].max()
-gbp_min = df_small['GBP'].min()
+gbp_max = df['GBP'].max()
+gbp_min = df['GBP'].min()
 
-df_small = df_small.astype(type_conversion_dict)
-df_small.set_index('Period', inplace=True)
+df = df.astype(type_conversion_dict)
+df.set_index('Period', inplace=True)
 
 # Line chart of the data with scatter points on the peaks and valleys and size adjustment
-ax = df_small.plot(lw=6, zorder=1)
-plt.scatter('2020-03-19', df_small['GBP'].max(), c='black', s=100, zorder=2)
-plt.scatter('2020-02-18', df_small['GBP'].min(), c='black', s=100, zorder=2)
-plt.scatter('2021-01-06', df_small['USD'].max(), c='black', s=100, zorder=2)
-plt.scatter('2020-03-20', df_small['USD'].min(), c='black', s=100, zorder=2)
+ax = df.plot(lw=6, zorder=1)
+plt.scatter('2020-03-19', df['GBP'].max(), c='black', s=100, zorder=2)
+plt.scatter('2020-02-18', df['GBP'].min(), c='black', s=100, zorder=2)
+plt.scatter('2021-01-06', df['USD'].max(), c='black', s=100, zorder=2)
+plt.scatter('2020-03-20', df['USD'].min(), c='black', s=100, zorder=2)
 
 # Change the label and their size
 plt.xlabel('Period', fontsize=20)
