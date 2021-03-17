@@ -20,6 +20,7 @@ df.columns = df.columns.str.strip()
 # fill the null (NaN) values with 0 to help with type conversion
 df = df.fillna(0)
 
+# Reduce the width of the data frame
 df_small = df[[
     'Period Unit',
     # 'Australian dollar',
@@ -29,7 +30,7 @@ df_small = df[[
     'UK pound sterling',
     'US dollar'
 ]]
-
+# Change the names of the columns for simpler comparisons
 headers = {
     'Period Unit': 'Period',
     # 'Australian dollar': 'AUD',
@@ -51,6 +52,7 @@ df_small.rename(columns=headers, inplace=True)
 df_small = df_small[~df_small['GBP'].isin(['-'])]
 df_small = df_small[~df_small['USD'].isin(['-'])]
 
+# Change the data type of the working columns
 type_conversion_dict = {
     'Period': 'datetime64[ns]',
     # 'AUD': float,
@@ -74,22 +76,26 @@ gbp_min = df_small['GBP'].min()
 df_small = df_small.astype(type_conversion_dict)
 df_small.set_index('Period', inplace=True)
 
-# # Bar Chart of data
+# Line chart of the data with scatter points on the peaks and valleys and size adjustment
 ax = df_small.plot(lw=6, zorder=1)
 plt.scatter('2020-03-19', df_small['GBP'].max(), c='black', s=100, zorder=2)
 plt.scatter('2020-02-18', df_small['GBP'].min(), c='black', s=100, zorder=2)
 plt.scatter('2021-01-06', df_small['USD'].max(), c='black', s=100, zorder=2)
 plt.scatter('2020-03-20', df_small['USD'].min(), c='black', s=100, zorder=2)
 
+# Change the label and their size
 plt.xlabel('Period', fontsize=20)
 plt.ylabel('Euro', fontsize=20)
-
 for label in (ax.get_xticklabels() + ax.get_yticklabels()):
     label.set_fontsize(16)
 
 axes = plt.gca()
 
+# Display the legend
 ax.legend()
 
+# Create a red-line at 1.00 which denotes the Euro
 plt.axhline(y=1, color='r', linestyle='--', lw=4)
+
+# Show the created graph
 plt.show()
