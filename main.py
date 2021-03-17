@@ -7,21 +7,21 @@ import matplotlib.lines as mlines
 pd.set_option('display.max_columns', None)
 
 # store the csv as a dataframe
-df = pd.read_csv('euro-daily-hist_1999_2020.csv', delimiter=',')
+df2 = pd.read_csv('euro-daily-hist_1999_2020.csv', delimiter=',')
 
 '''CLEAN THE COLUMN HEADERS'''
 # Remove the square brackets around
-df.columns = df.columns.str.replace(r'([\[\]])', '')
+df2.columns = df2.columns.str.replace(r'([\[\]])', '')
 
 # Remove the '\' and ':' from 'Period\Unit:' column
-df.columns = df.columns.str.replace(r'[^\w.+\s]', ' ')
-df.columns = df.columns.str.strip()
+df2.columns = df2.columns.str.replace(r'[^\w.+\s]', ' ')
+df2.columns = df2.columns.str.strip()
 
 # fill the null (NaN) values with 0 to help with type conversion
-df = df.fillna(0)
+df2 = df2.fillna(0)
 
 # Reduce the width of the data frame
-df = df[[
+df2 = df2[[
     'Period Unit',
     # 'Australian dollar',
     # 'Chinese yuan renminbi',
@@ -41,16 +41,16 @@ headers = {
     'US dollar': 'USD'
 }
 
-df.rename(columns=headers, inplace=True)
-# print(df)
+df2.rename(columns=headers, inplace=True)
+# print(df2)
 
 
-# df = df[~df['AUD'].isin(['-'])]
-# df = df[~df['CNY'].isin(['-'])]
-# df = df[~df['KRW'].isin(['-'])]
-# df = df[~df['BRL'].isin(['-'])]
-df = df[~df['GBP'].isin(['-'])]
-df = df[~df['USD'].isin(['-'])]
+# df2 = df2[~df2['AUD'].isin(['-'])]
+# df2 = df2[~df2['CNY'].isin(['-'])]
+# df2 = df2[~df2['KRW'].isin(['-'])]
+# df2 = df2[~df2['BRL'].isin(['-'])]
+df2 = df2[~df2['GBP'].isin(['-'])]
+df2 = df2[~df2['USD'].isin(['-'])]
 
 # Change the data type of the working columns
 type_conversion_dict = {
@@ -62,26 +62,26 @@ type_conversion_dict = {
     'USD': float
 }
 
-df['Period'] = pd.to_datetime(df['Period'])
+df2['Period'] = pd.to_datetime(df2['Period'])
 
-df = df[df['Period'] > '2020-01-01 00:00:00']
-df = df[df['Period'] < '2021-02-12 00:00:00']
+df2 = df2[df2['Period'] > '2020-01-01 00:00:00']
+df2 = df2[df2['Period'] < '2021-02-12 00:00:00']
 
-usd_max = df['USD'].max()
-usd_min = df['USD'].min()
+usd_max = df2['USD'].max()
+usd_min = df2['USD'].min()
 
-gbp_max = df['GBP'].max()
-gbp_min = df['GBP'].min()
+gbp_max = df2['GBP'].max()
+gbp_min = df2['GBP'].min()
 
-df = df.astype(type_conversion_dict)
-df.set_index('Period', inplace=True)
+df2 = df2.astype(type_conversion_dict)
+df2.set_index('Period', inplace=True)
 
 # Line chart of the data with scatter points on the peaks and valleys and size adjustment
-ax = df.plot(lw=6, zorder=1)
-plt.scatter('2020-03-19', df['GBP'].max(), c='black', s=100, zorder=2)
-plt.scatter('2020-02-18', df['GBP'].min(), c='black', s=100, zorder=2)
-plt.scatter('2021-01-06', df['USD'].max(), c='black', s=100, zorder=2)
-plt.scatter('2020-03-20', df['USD'].min(), c='black', s=100, zorder=2)
+ax = df2.plot(lw=6, zorder=1)
+plt.scatter('2020-03-19', df2['GBP'].max(), c='black', s=100, zorder=2)
+plt.scatter('2020-02-18', df2['GBP'].min(), c='black', s=100, zorder=2)
+plt.scatter('2021-01-06', df2['USD'].max(), c='black', s=100, zorder=2)
+plt.scatter('2020-03-20', df2['USD'].min(), c='black', s=100, zorder=2)
 
 # Change the label and their size
 plt.xlabel('Period', fontsize=20)
